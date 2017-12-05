@@ -28,17 +28,7 @@ export default {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          extractCSS: true
-        }
-      },
-      {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader',
-          fallback: 'vue-style-loader'
-        })
+        loader: 'vue-loader'
       }
     ]
   },

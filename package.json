@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "build": "run-s clean build-client",
+    "watch": "run-s clean watch-client",
     "build-client": "webpack --progress --colors --config webpack/config.babel.js",
+    "watch-client": "webpack --progress --colors --watch --config webpack/config.babel.js",
     "clean": "rimraf built/"
   },
   "author": "feats choi",
@@ -30,6 +32,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-vue": "^1.2.1",
     "babel-register": "^6.26.0",
+    "css-loader": "^0.28.7",
     "es6-promise": "^4.1.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "json-loader": "^0.5.7",
