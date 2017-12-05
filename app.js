@@ -1,8 +1,6 @@
-Vue.component('hello-world', {
-  template: '<div>Hello World</div>'
-});
+import HelloWorld from './components/HelloWorld';
 
 new Vue({
   el: '#app',
-  render: h => h('hello-world')
+  render: h => h(HelloWorld)
 });

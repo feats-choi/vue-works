@@ -3,12 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "start": "run-s clean build setup",
-    "clean": "rimraf built/",
-    "build": "run-p build-server build-client",
-    "setup": "node server/index.babel.js",
-    "build-server": "webpack --progress --colors --config webpack/server.babel.js",
-    "build-client": "webpack --progress --colors --config webpack/client.babel.js"
+    "build": "run-s clean build-client",
+    "build-client": "webpack --progress --colors --config webpack/config.babel.js",
+    "clean": "rimraf built/"
   },
   "author": "feats choi",
   "license": "MIT",
