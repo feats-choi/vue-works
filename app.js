@@ -1,4 +1,8 @@
+Vue.component('hello-world', {
+  template: '<div>Hello World</div>'
+});
+
 new Vue({
   el: '#app',
-  template: '<div>Hello, World</div>'
+  render: h => h('hello-world')
 });
