@@ -8,15 +8,20 @@ export default function createStore(){
 
   return new Vuex.Store({
     state: {
-      renderedName: LOADING_TEXT
+      claps: 0,
+      renderedText: LOADING_TEXT
     },
     mutations: {
-      changeRenderedName: function(state, payload){
-        state.renderedName = payload;
+      increment: (state) => {
+        state.claps++
       },
-      showLoading: function(state){
-        state.renderedName = LOADING_TEXT
+      showLoading: (state) => {
+        state.renderedText = LOADING_TEXT;
+      },
+      changeRenderedText: (state, text) => {
+        state.renderedText = text;
       }
-    }
+    },
+    strict: true
   });
 };

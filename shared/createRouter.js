@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Top from 'shared/components/Top';
-import Book from 'shared/components/Book';
+import Hello from 'shared/components/Hello'
+import Clap from 'shared/components/Clap'
 
 Vue.use(Router);
 
@@ -9,8 +9,16 @@ export default function createRouter(){
   return new Router({
     mode: 'history',
     routes: [
-      { path: '/', component: Top },
-      { path: '/book', component: Book }
+      {
+        path: '/links',
+        name: 'Hello',
+        component: Hello
+      },
+      {
+        path: '/',
+        name: 'Clap',
+        component: Clap
+      }
     ]
   });
 }

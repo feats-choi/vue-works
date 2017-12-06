@@ -31,7 +31,7 @@ server.get('*', (req, res) => {
   });
 });
 
-server.listen(9999, (err) => {
+server.listen(8080, (err) => {
   if(err) return console.info('server setup failed...');
-  console.info('server started on the port 9999');
+  console.info('server started on the port 8080');
 });

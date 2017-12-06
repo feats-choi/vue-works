@@ -19,7 +19,9 @@ export default (context) => {
       }
 
       Promise.all(matchedComponents.map(({ preFetchData }) => preFetchData && preFetchData(store))).then(() => {
-        console.info('server side rendering~');
+
+        console.info('====== server side rendering ======');
+
         context.state = store.state;
         resolve(app);
       }).catch(reject)

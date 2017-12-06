@@ -21,7 +21,9 @@ router.onReady(() => {
     }
 
     Promise.all(preFetchers.map(preFetcher => preFetcher(store))).then(() => {
-      console.info('client side rendering~');
+
+      console.info('====== client side rendering ======');
+
       return next();
     }).catch(next);
   });
